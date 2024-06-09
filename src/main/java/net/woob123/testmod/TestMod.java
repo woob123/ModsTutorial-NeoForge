@@ -15,7 +15,7 @@ import org.slf4j.Logger;
 
 @Mod(TestMod.MOD_ID)
 public class TestMod {
-    public static final String MOD_ID = "examplemod";
+    public static final String MOD_ID = "testing";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public TestMod(IEventBus bus) {
