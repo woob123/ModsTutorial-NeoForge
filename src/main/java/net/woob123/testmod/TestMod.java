@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package net.woob123.testmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -13,12 +13,12 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
-@Mod(ExampleMod.MODID)
-public class ExampleMod {
-    public static final String MODID = "examplemod";
+@Mod(TestMod.MOD_ID)
+public class TestMod {
+    public static final String MOD_ID = "examplemod";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public ExampleMod(IEventBus bus) {
+    public TestMod(IEventBus bus) {
 
     }
 
@@ -35,7 +35,7 @@ public class ExampleMod {
 
     }
 
-    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
