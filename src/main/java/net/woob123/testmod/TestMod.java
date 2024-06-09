@@ -2,6 +2,7 @@ package net.woob123.testmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -9,17 +10,27 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.woob123.testmod.item.ModCreativeModTabs;
+import net.woob123.testmod.item.ModItems;
 import org.slf4j.Logger;
 
 @Mod(TestMod.MOD_ID)
 public class TestMod {
-    public static final String MOD_ID = "testing";
+    public static final String MOD_ID = "testmod";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public TestMod(IEventBus bus) {
+        //Makes sure to add the items to the mod
+        ModItems.register(bus);
+        //Adds items to custom creative tab
+        ModCreativeModTabs.register(bus);
 
+        bus.addListener(this::commonSetup);
+        NeoForge.EVENT_BUS.register(this);
+        bus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -27,7 +38,11 @@ public class TestMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        //Adds items to normal creative tab
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.SAPPHIRE.value());
+            event.accept(ModItems.RAW_SAPPHIRE.value());
+        }
     }
 
     @SubscribeEvent
