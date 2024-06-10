@@ -7,6 +7,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
+import net.woob123.testmod.block.ModBlocks;
 
 public class ModCreativeModTabs {
     //Adding creative tabs
@@ -17,8 +18,11 @@ public class ModCreativeModTabs {
             .icon(() -> ModItems.SAPPHIRE.value().getDefaultInstance())
 
             .displayItems((pParameters, pOutput) -> {
-                pOutput.accept(ModItems.SAPPHIRE.value());
-                pOutput.accept(ModItems.RAW_SAPPHIRE.value());
+                pOutput.accept(ModItems.SAPPHIRE.get());
+                pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+
+                pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
             }).build());
     public static void register(IEventBus bus){
         CREATIVE_MOD_TABS.register(bus);

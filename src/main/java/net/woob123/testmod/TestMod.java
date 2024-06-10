@@ -13,6 +13,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.ModCreativeModTabs;
 import net.woob123.testmod.item.ModItems;
 import org.slf4j.Logger;
@@ -27,6 +28,8 @@ public class TestMod {
         ModItems.register(bus);
         //Adds items to custom creative tab
         ModCreativeModTabs.register(bus);
+        //Adds blocks to the mod
+        ModBlocks.register(bus);
 
         bus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
@@ -40,8 +43,12 @@ public class TestMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         //Adds items to normal creative tab
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.SAPPHIRE.value());
-            event.accept(ModItems.RAW_SAPPHIRE.value());
+            event.accept(ModItems.SAPPHIRE.get());
+            event.accept(ModItems.RAW_SAPPHIRE.get());
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+            event.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
         }
     }
 
