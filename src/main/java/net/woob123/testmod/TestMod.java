@@ -46,9 +46,10 @@ public class TestMod {
             event.accept(ModItems.SAPPHIRE.get());
             event.accept(ModItems.RAW_SAPPHIRE.get());
         }
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+        else if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.SAPPHIRE_BLOCK.get());
             event.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
+            event.accept(ModBlocks.SAPPHIRE_ORE.get());
         }
     }
 

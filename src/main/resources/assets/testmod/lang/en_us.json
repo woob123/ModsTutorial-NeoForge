@@ -4,6 +4,7 @@
 
   "block.testmod.sapphire_block": "Sapphire Block",
   "block.testmod.raw_sapphire_block": "Raw Sapphire Block",
+  "block.testmod.sapphire_ore": "Sapphire Ore",
 
   "creativetab.test_tab": "Test Tab"
 }
