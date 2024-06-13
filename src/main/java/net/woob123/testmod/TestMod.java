@@ -51,6 +51,9 @@ public class TestMod {
             event.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
             event.accept(ModBlocks.SAPPHIRE_ORE.get());
         }
+        else if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.METAL_DETECTOR.get());
+        }
     }
 
     @SubscribeEvent
