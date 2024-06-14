@@ -1,4 +1,4 @@
-package net.woob123.testmod.item;
+package net.woob123.testmod.util;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -8,6 +8,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
 import net.woob123.testmod.block.ModBlocks;
+import net.woob123.testmod.item.ModItems;
 
 public class ModCreativeModTabs {
     //Adding creative tabs

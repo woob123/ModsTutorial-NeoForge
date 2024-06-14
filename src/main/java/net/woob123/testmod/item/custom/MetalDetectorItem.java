@@ -13,6 +13,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.woob123.testmod.util.ModTags;
 
 import java.util.List;
 
@@ -65,6 +66,6 @@ public class MetalDetectorItem extends Item {
 
     private boolean isOre(BlockState state) {
         //What block is it?
-        return state.is(Blocks.IRON_ORE) || state.is(Blocks.COPPER_ORE) || state.is(Blocks.COAL_ORE) || state.is(Blocks.GOLD_ORE);
+        return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
     }
 }
