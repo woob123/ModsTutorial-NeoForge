@@ -14,5 +14,8 @@
 
   "item.testmod.pine_cone": "Pine Cone",
 
-  "creativetab.test_tab": "Test Tab"
+  "creativetab.test_tab": "Test Tab",
+
+  "item.testmod.metal_detector.tooltip": "Finds ores",
+  "block.testmod.sound_block.tooltip": "Makes sounds"
 }
