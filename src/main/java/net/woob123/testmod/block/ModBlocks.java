@@ -11,6 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
+import net.woob123.testmod.block.custom.SoundBlock;
 import net.woob123.testmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -28,6 +29,9 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
                     .strength(0.4f).requiresCorrectToolForDrops()));
+
+    public static final DeferredHolder<Block, SoundBlock> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.of()));
 
     public static <T extends Block> DeferredHolder<Block, T> registerBlock(String name, Supplier<T> block){
         var toReturn = BLOCKS.register(name, block);

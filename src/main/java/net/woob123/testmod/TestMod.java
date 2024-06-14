@@ -45,6 +45,7 @@ public class TestMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.SAPPHIRE.get());
             event.accept(ModItems.RAW_SAPPHIRE.get());
+            event.accept(ModItems.PINE_CONE.get());
         }
         else if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             event.accept(ModBlocks.SAPPHIRE_BLOCK.get());
@@ -53,6 +54,12 @@ public class TestMod {
         }
         else if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
             event.accept(ModItems.METAL_DETECTOR.get());
+        }
+        else if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
+            event.accept(ModBlocks.SOUND_BLOCK.get());
+        }
+        else if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+            event.accept(ModItems.STRAWBERRY.get());
         }
     }
 

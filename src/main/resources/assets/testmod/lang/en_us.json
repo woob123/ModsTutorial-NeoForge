@@ -8,6 +8,11 @@
   "block.testmod.raw_sapphire_block": "Raw Sapphire Block",
   "block.testmod.sapphire_ore": "Sapphire Ore",
 
+  "block.testmod.sound_block": "Sound Block",
+
+  "item.testmod.strawberry": "Strawberry",
+
+  "item.testmod.pine_cone": "Pine Cone",
 
   "creativetab.test_tab": "Test Tab"
 }

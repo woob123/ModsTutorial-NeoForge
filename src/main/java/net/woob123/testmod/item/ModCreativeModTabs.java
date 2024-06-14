@@ -18,14 +18,26 @@ public class ModCreativeModTabs {
             .icon(() -> ModItems.SAPPHIRE.value().getDefaultInstance())
 
             .displayItems((pParameters, pOutput) -> {
+                //Items
                 pOutput.accept(ModItems.SAPPHIRE.get());
                 pOutput.accept(ModItems.RAW_SAPPHIRE.get());
 
+                //Advanced items
                 pOutput.accept(ModItems.METAL_DETECTOR.get());
 
+                //Blocks
                 pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                 pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_ORE.get());
+
+                //Advanced blocks
+                pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+
+                //Foods
+                pOutput.accept(ModItems.STRAWBERRY.get());
+
+                //Fuel items
+                pOutput.accept(ModItems.PINE_CONE.get());
             }).build());
     public static void register(IEventBus bus){
         CREATIVE_MOD_TABS.register(bus);
