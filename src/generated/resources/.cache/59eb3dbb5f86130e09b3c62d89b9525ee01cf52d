@@ -1,0 +1,5 @@
+// 1.20.6	2024-06-15T22:44:33.4724931	Loot Tables
+eadd000c86731fc59ed7520d336a1a0e5fdfcda7 data/testmod/loot_tables/blocks/raw_sapphire_block.json
+d091e5bf79e6a49afedd8fc1ac94ff4724210ab7 data/testmod/loot_tables/blocks/sapphire_block.json
+d82e1fe445ce3132a08b52e18fb172820b1279f0 data/testmod/loot_tables/blocks/sapphire_ore.json
+26c8e5f0e5177a0abdcb57c0889b568c1c6fb50f data/testmod/loot_tables/blocks/sound_block.json
