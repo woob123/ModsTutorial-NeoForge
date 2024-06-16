@@ -1,4 +1,7 @@
-// 1.20.6	2024-06-15T22:44:33.4704904	Tags for minecraft:block mod id testmod
+// 1.20.6	2024-06-16T00:05:05.7070182	Tags for minecraft:block mod id testmod
+d2cb4152db1555239e9ace83b849f15f1d29d957 data/minecraft/tags/blocks/fences.json
+e04ff04f08abfc48e4d0b44a686fa28fe4360bc2 data/minecraft/tags/blocks/fence_gates.json
 3735622c344aecb3728e1ddecddd075b6c135a77 data/minecraft/tags/blocks/mineable/pickaxe.json
 dcd2e947b73895bee4ee352faccd1ca6f3867b3a data/minecraft/tags/blocks/needs_iron_tool.json
+fbcc4375da21473d130bfb5bd26bbf95639020da data/minecraft/tags/blocks/walls.json
 7c0cfe6e695aec3dcde15afe7571c0da87e1752e data/testmod/tags/blocks/metal_detector_valuables.json

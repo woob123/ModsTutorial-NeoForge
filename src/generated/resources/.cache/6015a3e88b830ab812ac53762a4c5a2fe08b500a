@@ -1,6 +1,15 @@
-// 1.20.6	2024-06-15T22:44:33.4744915	Item Models: testmod
+// 1.20.6	2024-06-16T00:05:05.7110174	Item Models: testmod
 d89ed460e9c5a6a8a06b154ab143e4a5a06307a4 assets/testmod/models/item/metal_detector.json
 4aec79de5dc4ce9b6a9997bddb9f8cf3b80e82c9 assets/testmod/models/item/pine_cone.json
 2f41f2b970d351507c3598ede3a24acfda5acc78 assets/testmod/models/item/raw_sapphire.json
 e3b32f83ca3aaa4f46841af3f084fa54c1fe2a53 assets/testmod/models/item/sapphire.json
+455da553be6af7f7beaa9f957b80fff7b5970e3d assets/testmod/models/item/sapphire_button.json
+4a3f2eef99916f6789371dc5345cbce4fc269fe9 assets/testmod/models/item/sapphire_door.json
+8f22175c855d7d69b02bc95de724f4581c66b97a assets/testmod/models/item/sapphire_fence.json
+82f9b4e8d5df6fcf71463848e9f9bc3a967f0e01 assets/testmod/models/item/sapphire_fence_gate.json
+7c108ae327baeed8551d647351648909926fbc16 assets/testmod/models/item/sapphire_pressure_plate.json
+bd890eca4ac15d1f4c3e8bddcd7ae6da18e6f7a5 assets/testmod/models/item/sapphire_slab.json
+fb33b86d47175d99e0d17f91511eacba77d40934 assets/testmod/models/item/sapphire_stairs.json
+252c792abfd81ffc9c96451afdedeb6bf6be9eda assets/testmod/models/item/sapphire_trapdoor.json
+39e28f10ed2a550efbd5d4686da8a2a9b8ffa3f5 assets/testmod/models/item/sapphire_wall.json
 1a5f3e51550489650781874fac762f6c92b626d4 assets/testmod/models/item/strawberry.json
