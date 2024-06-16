@@ -9,7 +9,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
 import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.ModItems;
-import org.checkerframework.checker.units.qual.C;
 
 public class ModCreativeModTabs {
     //A deferred register for creative tabs
@@ -40,6 +39,9 @@ public class ModCreativeModTabs {
 
                 //Fuel items
                 pOutput.accept(ModItems.PINE_CONE.get());
+
+                //Item with 3D model
+                pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
             }).build());
 
 
