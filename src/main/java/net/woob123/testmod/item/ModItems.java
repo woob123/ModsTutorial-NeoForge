@@ -7,6 +7,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
 import net.woob123.testmod.item.custom.FuelItem;
 import net.woob123.testmod.item.custom.MetalDetectorItem;
+import net.woob123.testmod.item.custom.ModArmorItem;
 
 public class ModItems {
     //"Holds" the items
@@ -61,22 +62,22 @@ public class ModItems {
     //Custom armor
     //Custom helmet
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
-            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
+            () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
     //Custom chestplate
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
+            () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
     //Custom leggings
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
-            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
+            () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
     //Custom boots
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
-            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
+            () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
 
