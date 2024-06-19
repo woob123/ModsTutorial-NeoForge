@@ -1,4 +1,4 @@
-// 1.20.6	2024-06-16T00:05:05.7090168	Loot Tables
+// 1.20.6	2024-06-19T11:00:36.6906869	Loot Tables
 eadd000c86731fc59ed7520d336a1a0e5fdfcda7 data/testmod/loot_tables/blocks/raw_sapphire_block.json
 d091e5bf79e6a49afedd8fc1ac94ff4724210ab7 data/testmod/loot_tables/blocks/sapphire_block.json
 86765119d46fb1fbf51295badcc72831c6e92ae4 data/testmod/loot_tables/blocks/sapphire_button.json
@@ -10,5 +10,4 @@ d82e1fe445ce3132a08b52e18fb172820b1279f0 data/testmod/loot_tables/blocks/sapphir
 9e2f63c0d3087d7679f6df4489a5081a56caa018 data/testmod/loot_tables/blocks/sapphire_slab.json
 6bfbd515cc4e0c22f071851fe225582f0fd86bfe data/testmod/loot_tables/blocks/sapphire_stairs.json
 8e782becc9a5b6f0d5eba118b76d44284da777c7 data/testmod/loot_tables/blocks/sapphire_trapdoor.json
-6957b14d6ff9890650d299a4fdd1cddeefefc54b data/testmod/loot_tables/blocks/sapphire_wall.json
 26c8e5f0e5177a0abdcb57c0889b568c1c6fb50f data/testmod/loot_tables/blocks/sound_block.json

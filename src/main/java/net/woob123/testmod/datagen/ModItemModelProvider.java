@@ -27,6 +27,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.STRAWBERRY);
         simpleItem(ModItems.SAPPHIRE);
 
+        handheldItem(ModItems.SAPPHIRE_SWORD);
+        handheldItem(ModItems.SAPPHIRE_PICKAXE);
+        handheldItem(ModItems.SAPPHIRE_AXE);
+        handheldItem(ModItems.SAPPHIRE_HOE);
+        handheldItem(ModItems.SAPPHIRE_SHOVEL);
+
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
 
         fenceItem(ModBlocks.SAPPHIRE_FENCE, ModBlocks.SAPPHIRE_BLOCK);
@@ -40,10 +46,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         trapdoorItem(ModBlocks.SAPPHIRE_TRAPDOOR);
     }
 
+    //Normal items
     private ItemModelBuilder simpleItem(DeferredHolder<Item, ? extends Item> item){
         return  withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                  new ResourceLocation(TestMod.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    //Handheld items
+    private ItemModelBuilder handheldItem(DeferredHolder<Item, ? extends Item> item){
+        return  withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(TestMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     //ForgeRegistries -> BuiltInRegistries

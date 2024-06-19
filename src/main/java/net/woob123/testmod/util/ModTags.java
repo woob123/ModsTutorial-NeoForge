@@ -12,7 +12,9 @@ public class ModTags {
     public static class Blocks{
         //Adding block tags
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
-        public static final TagKey<Block> SAPPHIRE_EVERYTHING = tag("sapphire_everything");
+        public static final TagKey<Block> INCORRECT_FOR_SAPPHIRE_TOOL = tag("incorrect_for_sapphire_tool");
+        public static final TagKey<Block> NEEDS_SAPPHIRE_TOOL = tag("needs_sapphire_tool");
+
 
         private static TagKey<Block> tag(String name){
             return BlockTags.create(new ResourceLocation(TestMod.MOD_ID, name));
@@ -20,7 +22,6 @@ public class ModTags {
     }
     public static class Items{
         //Adding item tags
-
         private static TagKey<Item> tag(String name){
             return ItemTags.create(new ResourceLocation(TestMod.MOD_ID, name));
         }

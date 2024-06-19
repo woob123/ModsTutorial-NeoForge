@@ -15,7 +15,7 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MOD_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TestMod.MOD_ID);
     //Adding custom creative tabs
     public static final Holder<CreativeModeTab> TEST_TAB = CREATIVE_MOD_TABS.register("test_tab", () -> CreativeModeTab.builder()
-            .title(Component.literal("Test Tab"))
+            .title(Component.translatable("creative.test_tab"))
             .icon(() -> ModItems.SAPPHIRE.value().getDefaultInstance())
 
             .displayItems((pParameters, pOutput) -> {
@@ -59,6 +59,19 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModBlocks.SAPPHIRE_DOOR.get());
                 pOutput.accept(ModBlocks.SAPPHIRE_TRAPDOOR.get());
             })
+            .build());
+
+    public static final Holder<CreativeModeTab> SAPPHIRE_TOOLS_AND_ARMOR = CREATIVE_MOD_TABS.register("sapphire_tools_and_armor", () -> CreativeModeTab.builder()
+            .title(Component.translatable("creative.sapphire_tools_and_armor"))
+            .icon(() -> ModItems.SAPPHIRE_SWORD.get().getDefaultInstance())
+
+            .displayItems(((pParameters, pOutput) -> {
+                pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
+                pOutput.accept(ModItems.SAPPHIRE_AXE.get());
+                pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());
+                pOutput.accept(ModItems.SAPPHIRE_SHOVEL.get());
+                pOutput.accept(ModItems.SAPPHIRE_HOE.get());
+            }))
             .build());
     public static void register(IEventBus bus){
         CREATIVE_MOD_TABS.register(bus);
