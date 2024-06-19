@@ -38,20 +38,47 @@ public class ModItems {
 
     //Custom sword
     public static final DeferredHolder<Item, SwordItem> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
-            () -> new SwordItem(ModToolTiers.SAPPHIRE, new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.SAPPHIRE, 3, -2.4F))));
+            () -> new SwordItem(ModToolTiers.SAPPHIRE, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.SAPPHIRE, 3, -2.4F))));
     //Custom pickaxe
     public static final DeferredHolder<Item, PickaxeItem> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
-            () -> new PickaxeItem(ModToolTiers.SAPPHIRE, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.SAPPHIRE, 1.0F, -2.8F))));
+            () -> new PickaxeItem(ModToolTiers.SAPPHIRE, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.SAPPHIRE, 1.0F, -2.8F))));
     //Custom shovel
     public static final DeferredHolder<Item, ShovelItem> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel",
-            () -> new ShovelItem(ModToolTiers.SAPPHIRE, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.SAPPHIRE, 1.5F, -3.0F))));
+            () -> new ShovelItem(ModToolTiers.SAPPHIRE, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.SAPPHIRE, 1.5F, -3.0F))));
     //Custom axe
     public static final DeferredHolder<Item, AxeItem> SAPPHIRE_AXE = ITEMS.register("sapphire_axe",
-            () -> new AxeItem(ModToolTiers.SAPPHIRE, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.SAPPHIRE, 5.0F, -3.0F))));
+            () -> new AxeItem(ModToolTiers.SAPPHIRE, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.SAPPHIRE, 5.0F, -3.0F))));
     //Custom hoe
     public static final DeferredHolder<Item, HoeItem> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
-            () -> new HoeItem(ModToolTiers.SAPPHIRE, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.SAPPHIRE, -4.0F, 0.0F))));
+            () -> new HoeItem(ModToolTiers.SAPPHIRE, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.SAPPHIRE, -4.0F, 0.0F))));
 
+
+    //Custom armor
+    //Custom helmet
+    public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
+                    .durability(ArmorItem.Type.HELMET.getDurability(37))
+            ));
+    //Custom chestplate
+    public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
+                    .durability(ArmorItem.Type.HELMET.getDurability(37))
+            ));
+    //Custom leggings
+    public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
+                    .durability(ArmorItem.Type.HELMET.getDurability(37))
+            ));
+    //Custom boots
+    public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
+                    .durability(ArmorItem.Type.HELMET.getDurability(37))
+            ));
 
     public static void register(IEventBus bus){
         ITEMS.register(bus);

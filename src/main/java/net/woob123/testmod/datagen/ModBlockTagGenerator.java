@@ -43,5 +43,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.SAPPHIRE_FENCE_GATE.get());
 
         this.tag(ModTags.Blocks.INCORRECT_FOR_SAPPHIRE_TOOL);
+
+        this.tag(ModTags.Blocks.NEEDS_SAPPHIRE_TOOL)
+                .add(ModBlocks.SOUND_BLOCK.get());
     }
 }
