@@ -3,6 +3,8 @@ package net.woob123.testmod;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -14,9 +16,8 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.woob123.testmod.block.ModBlocks;
-import net.woob123.testmod.loot.ModLootModifiers;
-import net.woob123.testmod.util.ModCreativeModTabs;
 import net.woob123.testmod.item.ModItems;
+import net.woob123.testmod.util.ModCreativeModTabs;
 import org.slf4j.Logger;
 
 @Mod(TestMod.MOD_ID)
@@ -40,7 +41,10 @@ public class TestMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        //Adding pottable flowers
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT);
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

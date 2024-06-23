@@ -2,6 +2,7 @@ package net.woob123.testmod.block;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -76,6 +77,12 @@ public class ModBlocks {
     public static final DeferredHolder<Block, CropBlock> CORN_CROP = BLOCKS.register("corn_crop",
             () -> new CornCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PITCHER_CROP).noOcclusion().noCollission()));
 
+    //Flowers
+    public static final DeferredHolder<Block, FlowerBlock> CATMINT = registerBlock("catmint",
+            () -> new FlowerBlock(MobEffects.DIG_SPEED, 4, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM).noCollission().noOcclusion()));
+    //Potted flowers
+    public static final DeferredHolder<Block, FlowerPotBlock> POTTED_CATMINT = registerBlock("potted_catmint",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CATMINT, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_ALLIUM).noOcclusion()));
     public static <T extends Block> DeferredHolder<Block, T> registerBlock(String name, Supplier<T> block){
         var toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

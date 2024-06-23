@@ -1,5 +1,7 @@
-// 1.20.6	2024-06-23T15:18:21.4538268	Loot Tables
+// 1.20.6	2024-06-23T17:13:57.0890251	Loot Tables
+e670f2e27dd69c736a9b94105bd86809586db670 data/testmod/loot_tables/blocks/catmint.json
 a515d0084b45599b0709378f46d50f74319729d5 data/testmod/loot_tables/blocks/corn_crop.json
+1b4cb256e0223ffc9f2942d685d22b720ca05c01 data/testmod/loot_tables/blocks/potted_catmint.json
 eadd000c86731fc59ed7520d336a1a0e5fdfcda7 data/testmod/loot_tables/blocks/raw_sapphire_block.json
 d091e5bf79e6a49afedd8fc1ac94ff4724210ab7 data/testmod/loot_tables/blocks/sapphire_block.json
 86765119d46fb1fbf51295badcc72831c6e92ae4 data/testmod/loot_tables/blocks/sapphire_button.json

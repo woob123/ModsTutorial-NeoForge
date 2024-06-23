@@ -78,7 +78,7 @@ public class ModCreativeModTabs {
             }))
             .build());
 
-    public static final Holder<CreativeModeTab> CROPS = CREATIVE_MOD_TABS.register("crops", () -> CreativeModeTab.builder()
+    public static final Holder<CreativeModeTab> CROPS_AND_FLOWERS = CREATIVE_MOD_TABS.register("crops", () -> CreativeModeTab.builder()
             .title(Component.translatable("creative.crops"))
             .icon(() -> ModItems.STRAWBERRY.get().getDefaultInstance())
 
@@ -86,6 +86,7 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
                 pOutput.accept(ModItems.STRAWBERRY.get());
                 pOutput.accept(ModItems.CORN_SEEDS.get());
+                pOutput.accept(ModBlocks.CATMINT.get());
             }))
             .build());
     public static void register(IEventBus bus){

@@ -75,6 +75,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.STRAWBERRY_SEEDS);
         simpleItem(ModItems.CORN);
         simpleItem(ModItems.CORN_SEEDS);
+
+        simpleBlockItemBlockTexture(ModBlocks.CATMINT);
     }
 
     //Normal items
@@ -164,6 +166,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(TestMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItemBlockTexture(DeferredHolder<Block, ? extends Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(TestMod.MOD_ID,"block/" + item.getId().getPath()));
     }
 
 }

@@ -12,7 +12,6 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.neoforged.fml.common.Mod;
 import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.block.custom.CornCropBlock;
 import net.woob123.testmod.block.custom.StrawberryCropBlock;
@@ -51,6 +50,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Adding crops
         this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(), ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
         this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(), ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
+
+        //Flowers
+        this.dropSelf(ModBlocks.CATMINT.get());
+        this.add(ModBlocks.POTTED_CATMINT.get(), createPotFlowerItemTable(ModBlocks.CATMINT.get()));
     }
 
     //Crop drop condition

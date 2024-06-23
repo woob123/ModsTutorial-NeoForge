@@ -20,6 +20,10 @@
   "item.testmod.sapphire_boots": "Sapphire Boots",
 
   "item.testmod.strawberry_seeds": "Strawberry Seeds",
+  "item.testmod.corn_seeds": "Corn Seeds",
+
+  "item.testmod.corn": "Corn",
+  "block.testmod.catmint": "Catmint",
 
   "block.testmod.sound_block": "Sound Block",
 
