@@ -30,10 +30,6 @@ public class ModSounds {
             ModSounds.SOUND_BLOCK_HIT.get(),
             ModSounds.SOUND_BLOCK_FALL.get());
 
-//uite, asteapta oleac, vezi erorile?
-    //nu, daca dai tu run?
-    // merge?.. stai there
-    // gata mrg mai e si aia cu global loot modifers
     private static DeferredHolder<SoundEvent, SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(TestMod.MOD_ID, name)));
     }
