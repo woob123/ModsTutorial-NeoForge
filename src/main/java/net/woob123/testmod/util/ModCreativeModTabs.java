@@ -2,6 +2,7 @@ package net.woob123.testmod.util;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.data.models.model.ModelTemplate;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
@@ -42,6 +43,12 @@ public class ModCreativeModTabs {
 
                 //Item with 3D model
                 pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
+
+                //Custom entity
+                pOutput.accept(ModItems.RHINO_SPANW_EGG.get());
+
+                //Custom music disc
+                pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
             }).build());
 
 

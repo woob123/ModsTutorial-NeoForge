@@ -6,6 +6,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
 import net.woob123.testmod.block.ModBlocks;
+import net.woob123.testmod.entity.ModEntities;
 import net.woob123.testmod.item.custom.FuelItem;
 import net.woob123.testmod.item.custom.MetalDetectorItem;
 import net.woob123.testmod.item.custom.ModArmorItem;
@@ -95,6 +96,10 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
             () -> new RecordItem(6, ModSounds.BAR_BRAWL.get(), new Item.Properties().stacksTo(1), 2440));
 
+
+    //Entity spawn eggs
+    public static final DeferredHolder<Item, Item> RHINO_SPANW_EGG = ITEMS.register("rhino_spawn_egg",
+            () -> new SpawnEggItem(ModEntities.RHINO.get(), 0x7e9680, 0xc5d1c5, new Item.Properties()));
 
     public static void register(IEventBus bus){
         ITEMS.register(bus);

@@ -1,7 +1,7 @@
 package net.woob123.testmod;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -16,6 +16,8 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.woob123.testmod.block.ModBlocks;
+import net.woob123.testmod.entity.ModEntities;
+import net.woob123.testmod.entity.client.RhinoRenderer;
 import net.woob123.testmod.item.ModItems;
 import net.woob123.testmod.loot.ModLootModifiers;
 import net.woob123.testmod.sound.ModSounds;
@@ -37,12 +39,12 @@ public class TestMod {
         ModBlocks.register(bus);
         //Global loot modifiers
         ModLootModifiers.register(bus);
-
         //Custom villager professions
         ModVillagers.register(bus);
-
         //Custom sounds
         ModSounds.register(bus);
+        //Custom entities
+        ModEntities.register(bus);
 
         bus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
@@ -51,9 +53,7 @@ public class TestMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         //Adding pottable flowers
-        event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT);
-        });
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CATMINT.getId(), ModBlocks.POTTED_CATMINT));
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -88,8 +88,7 @@ public class TestMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
         }
     }
 }
