@@ -1,5 +1,6 @@
 package net.woob123.testmod.datagen.loot;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -9,7 +10,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.woob123.testmod.block.ModBlocks;
+import net.woob123.testmod.block.custom.StrawberryCropBlock;
 import net.woob123.testmod.item.ModItems;
 
 import java.util.Set;
@@ -41,7 +45,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Ore like loot tables
         this.add(ModBlocks.SAPPHIRE_ORE.get(),
                 block -> createOreDrops(ModBlocks.SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
+
+        //Adding crops
+        this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(), ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
     }
+
+    //Crop drop condition
+    LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+            .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())
+            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCropBlock.AGE, 5));
 
     //Creates loot tables for ore like drops
     protected LootTable.Builder createOreDrops(Block pBlock, Item pItem) {

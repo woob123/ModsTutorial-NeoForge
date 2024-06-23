@@ -77,6 +77,16 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModItems.SAPPHIRE_BOOTS.get());
             }))
             .build());
+
+    public static final Holder<CreativeModeTab> CROPS = CREATIVE_MOD_TABS.register("crops", () -> CreativeModeTab.builder()
+            .title(Component.translatable("creative.crops"))
+            .icon(() -> ModItems.STRAWBERRY.get().getDefaultInstance())
+
+            .displayItems(((pParameters, pOutput) -> {
+                pOutput.accept(ModItems.STRAWBERRY_SEEDS.get());
+                pOutput.accept(ModItems.STRAWBERRY.get());
+            }))
+            .build());
     public static void register(IEventBus bus){
         CREATIVE_MOD_TABS.register(bus);
     }

@@ -12,6 +12,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
 import net.woob123.testmod.block.custom.SoundBlock;
+import net.woob123.testmod.block.custom.StrawberryCropBlock;
 import net.woob123.testmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -36,38 +37,40 @@ public class ModBlocks {
 
     //Adding non-block blocks lol
 
-    //Stairs
+        //Stairs
     public static final DeferredHolder<Block, Block> SAPPHIRE_STAIRS = registerBlock("sapphire_stairs",
             () -> new StairBlock(ModBlocks.SAPPHIRE_BLOCK.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
-    //Slabs
+        //Slabs
     public static final DeferredHolder<Block, Block> SAPPHIRE_SLAB = registerBlock("sapphire_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
-    //Buttons
+        //Buttons
     public static final DeferredHolder<Block, Block> SAPPHIRE_BUTTON = registerBlock("sapphire_button",
             () -> new ButtonBlock(BlockSetType.IRON, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON)));
 
-    //Pressure plates
+        //Pressure plates
     public static final DeferredHolder<Block, Block> SAPPHIRE_PRESSURE_PLATE = registerBlock("sapphire_pressure_plate",
             () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
-    //Fences
+        //Fences
     public static final DeferredHolder<Block, Block> SAPPHIRE_FENCE = registerBlock("sapphire_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
-    //Fence gates
+        //Fence gates
     public static final DeferredHolder<Block, Block> SAPPHIRE_FENCE_GATE = registerBlock("sapphire_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
-    //Doors
+        //Doors
     public static final DeferredHolder<Block, Block> SAPPHIRE_DOOR = registerBlock("sapphire_door",
             () -> new DoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
 
-    //Trapdoor
+        //Trapdoor
     public static final DeferredHolder<Block, Block> SAPPHIRE_TRAPDOOR = registerBlock("sapphire_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
 
+    public static final DeferredHolder<Block, CropBlock> STRAWBERRY_CROP = BLOCKS.register("starwberry_crop",
+            () -> new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     public static <T extends Block> DeferredHolder<Block, T> registerBlock(String name, Supplier<T> block){
         var toReturn = BLOCKS.register(name, block);

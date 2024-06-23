@@ -5,6 +5,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
+import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.custom.FuelItem;
 import net.woob123.testmod.item.custom.MetalDetectorItem;
 import net.woob123.testmod.item.custom.ModArmorItem;
@@ -60,26 +61,30 @@ public class ModItems {
 
 
     //Custom armor
-    //Custom helmet
+        //Custom helmet
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
             () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
-    //Custom chestplate
+        //Custom chestplate
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
             () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
-    //Custom leggings
+        //Custom leggings
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
             () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
-    //Custom boots
+        //Custom boots
     public static final DeferredHolder<Item, ArmorItem> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
             () -> new ModArmorItem(ModArmorMaterials.SAPPHIRE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))
             ));
+
+    //Custom crops
+    public static final DeferredHolder<Item, Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus bus){
         ITEMS.register(bus);
