@@ -27,6 +27,8 @@ public class ModItems {
     //Adding food items
     public static final DeferredHolder<Item, Item> STRAWBERRY = ITEMS.register("strawberry",
             () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+    public static final DeferredHolder<Item, Item> CORN = ITEMS.register("corn",
+            () -> new Item(new Item.Properties().food(ModFoods.CORN)));
 
     //Adding items with 3D models
     public static final DeferredHolder<Item, Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
@@ -85,6 +87,9 @@ public class ModItems {
     //Custom crops
     public static final DeferredHolder<Item, Item> STRAWBERRY_SEEDS = ITEMS.register("strawberry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
+    public static final DeferredHolder<Item, Item> CORN_SEEDS = ITEMS.register("corn_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
+
 
     public static void register(IEventBus bus){
         ITEMS.register(bus);

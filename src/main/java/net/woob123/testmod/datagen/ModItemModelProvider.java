@@ -73,6 +73,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.SAPPHIRE_LEGGINGS);
 
         simpleItem(ModItems.STRAWBERRY_SEEDS);
+        simpleItem(ModItems.CORN);
+        simpleItem(ModItems.CORN_SEEDS);
     }
 
     //Normal items

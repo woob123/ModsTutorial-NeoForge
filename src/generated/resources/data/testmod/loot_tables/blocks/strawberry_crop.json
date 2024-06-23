@@ -16,7 +16,7 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "block": "testmod:starwberry_crop",
+                  "block": "testmod:strawberry_crop",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "age": "5"
@@ -38,7 +38,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "testmod:starwberry_crop",
+          "block": "testmod:strawberry_crop",
           "condition": "minecraft:block_state_property",
           "properties": {
             "age": "5"
@@ -65,5 +65,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "testmod:blocks/starwberry_crop"
+  "random_sequence": "testmod:blocks/strawberry_crop"
 }

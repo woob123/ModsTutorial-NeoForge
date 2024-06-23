@@ -12,7 +12,9 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.neoforged.fml.common.Mod;
 import net.woob123.testmod.block.ModBlocks;
+import net.woob123.testmod.block.custom.CornCropBlock;
 import net.woob123.testmod.block.custom.StrawberryCropBlock;
 import net.woob123.testmod.item.ModItems;
 
@@ -48,12 +50,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         //Adding crops
         this.add(ModBlocks.STRAWBERRY_CROP.get(), createCropDrops(ModBlocks.STRAWBERRY_CROP.get(), ModItems.STRAWBERRY.get(), ModItems.STRAWBERRY_SEEDS.get(), lootitemcondition$builder));
+        this.add(ModBlocks.CORN_CROP.get(), createCropDrops(ModBlocks.CORN_CROP.get(), ModItems.CORN.get(), ModItems.CORN_SEEDS.get(), lootitemcondition$builder2));
     }
 
     //Crop drop condition
     LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
             .hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP.get())
             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(StrawberryCropBlock.AGE, 5));
+
+    LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+            .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 7))
+            .or(LootItemBlockStatePropertyCondition
+                    .hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                    .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, 8)));
+
 
     //Creates loot tables for ore like drops
     protected LootTable.Builder createOreDrops(Block pBlock, Item pItem) {

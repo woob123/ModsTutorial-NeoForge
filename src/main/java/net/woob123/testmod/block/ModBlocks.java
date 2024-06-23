@@ -11,6 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.woob123.testmod.TestMod;
+import net.woob123.testmod.block.custom.CornCropBlock;
 import net.woob123.testmod.block.custom.SoundBlock;
 import net.woob123.testmod.block.custom.StrawberryCropBlock;
 import net.woob123.testmod.item.ModItems;
@@ -69,8 +70,11 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> SAPPHIRE_TRAPDOOR = registerBlock("sapphire_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.CHERRY, BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion()));
 
-    public static final DeferredHolder<Block, CropBlock> STRAWBERRY_CROP = BLOCKS.register("starwberry_crop",
+    //Crops
+    public static final DeferredHolder<Block, CropBlock> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final DeferredHolder<Block, CropBlock> CORN_CROP = BLOCKS.register("corn_crop",
+            () -> new CornCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PITCHER_CROP).noOcclusion().noCollission()));
 
     public static <T extends Block> DeferredHolder<Block, T> registerBlock(String name, Supplier<T> block){
         var toReturn = BLOCKS.register(name, block);
