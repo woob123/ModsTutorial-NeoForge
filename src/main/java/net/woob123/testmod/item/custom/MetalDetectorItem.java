@@ -3,6 +3,7 @@ package net.woob123.testmod.item.custom;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -11,8 +12,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.woob123.testmod.sound.ModSounds;
 import net.woob123.testmod.util.ModTags;
 
 import java.util.List;
@@ -36,8 +37,17 @@ public class MetalDetectorItem extends Item {
 
                 if(isOre(state)){
                     //Sending the cooordonates in chat
+                    assert player != null;
                     outputCoordinates(position.below(), player, state.getBlock());
                     foundBlock = true;
+                    pContext.getLevel().playSound(
+                            null,
+                            position.getX(),
+                            position.getY(),
+                            position.getZ(),
+                            ModSounds.METAL_DETECTOR_FOUND_ORE.get(),
+                            SoundSource.BLOCKS,
+                            1f, 1f);
                     break;
                 }
             }

@@ -16,6 +16,7 @@ import net.woob123.testmod.block.custom.CornCropBlock;
 import net.woob123.testmod.block.custom.SoundBlock;
 import net.woob123.testmod.block.custom.StrawberryCropBlock;
 import net.woob123.testmod.item.ModItems;
+import net.woob123.testmod.sound.ModSounds;
 
 import java.util.function.Supplier;
 
@@ -35,7 +36,7 @@ public class ModBlocks {
 
     //Adding custom blocks with custom classes
     public static final DeferredHolder<Block, SoundBlock> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.of()));
+            () -> new SoundBlock(BlockBehaviour.Properties.of().sound(ModSounds.SOUND_BLOCK_SOUNDS.get())));
 
     //Adding non-block blocks lol
 

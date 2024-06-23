@@ -1,0 +1,5 @@
+// 1.20.6	2024-06-23T19:39:03.3670705	Global Loot Modifiers : testmod
+2733c838281cd30b0004a0203547193d92dc173d data/neoforge/loot_modifiers/global_loot_modifiers.json
+97c9700426d73e367deddd78ee23e8cc59214a4f data/testmod/loot_modifiers/metal_detecor_from_jungle_temple.json
+7294f27fccfc7331b18fd770a476f1d4505ff315 data/testmod/loot_modifiers/pine_cone_from_creeper.json
+7b1aa3fe7c4d9a146ea79b891daddc9322e4ea3a data/testmod/loot_modifiers/pine_cone_from_grass.json

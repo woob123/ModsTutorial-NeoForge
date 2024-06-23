@@ -17,6 +17,8 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.ModItems;
+import net.woob123.testmod.loot.ModLootModifiers;
+import net.woob123.testmod.sound.ModSounds;
 import net.woob123.testmod.util.ModCreativeModTabs;
 import net.woob123.testmod.villager.ModVillagers;
 import org.slf4j.Logger;
@@ -29,15 +31,18 @@ public class TestMod {
     public TestMod(IEventBus bus) {
         //Makes sure to add the items to the mod
         ModItems.register(bus);
-        //Adds items to custom creative tab
+        //Adds the creative tabs
         ModCreativeModTabs.register(bus);
         //Adds blocks to the mod
         ModBlocks.register(bus);
         //Global loot modifiers
-        //ModLootModifiers.register(bus);
+        ModLootModifiers.register(bus);
 
         //Custom villager professions
         ModVillagers.register(bus);
+
+        //Custom sounds
+        ModSounds.register(bus);
 
         bus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
