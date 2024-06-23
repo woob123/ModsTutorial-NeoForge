@@ -15,7 +15,9 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.event.village.WandererTradesEvent;
 import net.woob123.testmod.TestMod;
+import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.ModItems;
+import net.woob123.testmod.villager.ModVillagers;
 
 import java.util.List;
 
@@ -45,6 +47,27 @@ public class ModEvents {
                     new ItemCost(Items.EMERALD, 32),
                     enchantedBook,
                     10, 8, 0.2f)));
+        }
+
+        //SoundMaster trades
+        if(event.getType() == ModVillagers.SOUND_MASTER.get()){
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            //Level 1 trades
+            trades.get(1).add(((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 16),
+                    new ItemStack(ModBlocks.SOUND_BLOCK.get()),
+                    10, 8, 0.2f)));
+
+            //Level 2 trades
+            trades.get(2).add(((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 30),
+                    new ItemStack(Items.MUSIC_DISC_13),
+                    5, 8, 0.2f)));
+            trades.get(2).add(((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 40),
+                    new ItemStack(Items.MUSIC_DISC_11),
+                    5, 8, 0.2f)));
         }
     }
 

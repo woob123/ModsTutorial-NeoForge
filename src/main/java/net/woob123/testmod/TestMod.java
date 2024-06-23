@@ -18,6 +18,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.ModItems;
 import net.woob123.testmod.util.ModCreativeModTabs;
+import net.woob123.testmod.villager.ModVillagers;
 import org.slf4j.Logger;
 
 @Mod(TestMod.MOD_ID)
@@ -34,6 +35,9 @@ public class TestMod {
         ModBlocks.register(bus);
         //Global loot modifiers
         //ModLootModifiers.register(bus);
+
+        //Custom villager professions
+        ModVillagers.register(bus);
 
         bus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);

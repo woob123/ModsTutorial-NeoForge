@@ -49,5 +49,7 @@
   "block.testmod.sapphire_door": "Sapphire Door",
   "block.testmod.sapphire_trapdoor": "Sapphire Trapdoor",
 
-  "item.testmod.sapphire_staff": "Sapphire Staff"
+  "item.testmod.sapphire_staff": "Sapphire Staff",
+
+  "entity.minecraft.villager.testmod.soundmaster": "Sound Master"
 }
