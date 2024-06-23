@@ -39,6 +39,9 @@
   "item.testmod.metal_detector.tooltip": "Finds ores",
   "block.testmod.sound_block.tooltip": "Makes sounds",
 
+  "item.testmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.testmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
   "block.testmod.sapphire_stairs": "Sapphire Stairs",
   "block.testmod.sapphire_slab": "Sapphire Slab",
   "block.testmod.sapphire_button": "Sapphire Button",

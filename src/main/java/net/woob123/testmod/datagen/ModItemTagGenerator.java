@@ -5,7 +5,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.Tags;
 import net.woob123.testmod.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -24,5 +23,8 @@ public class ModItemTagGenerator extends ItemTagsProvider{
                         ModItems.SAPPHIRE_CHESTPLATE.get(),
                         ModItems.SAPPHIRE_LEGGINGS.get(),
                         ModItems.SAPPHIRE_HELMET.get());
+
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.BAR_BRAWL_MUSIC_DISC.get());
     }
 }

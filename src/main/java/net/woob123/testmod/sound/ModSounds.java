@@ -22,6 +22,9 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> SOUND_BLOCK_PLACE = registerSoundEvents("sound_block_place");
     public static final DeferredHolder<SoundEvent, SoundEvent> SOUND_BLOCK_HIT = registerSoundEvents("sound_block_hit");
 
+    //Custom music discs
+    public static final DeferredHolder<SoundEvent, SoundEvent> BAR_BRAWL = registerSoundEvents("bar_brawl");
+
     public static final Supplier<SoundType> SOUND_BLOCK_SOUNDS = () -> new SoundType(
             1f, 1f,
             ModSounds.SOUND_BLOCK_BREAK.get(),

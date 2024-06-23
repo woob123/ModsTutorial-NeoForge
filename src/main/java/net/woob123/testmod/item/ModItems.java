@@ -9,6 +9,7 @@ import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.custom.FuelItem;
 import net.woob123.testmod.item.custom.MetalDetectorItem;
 import net.woob123.testmod.item.custom.ModArmorItem;
+import net.woob123.testmod.sound.ModSounds;
 
 public class ModItems {
     //"Holds" the items
@@ -89,6 +90,10 @@ public class ModItems {
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get(), new Item.Properties()));
     public static final DeferredHolder<Item, Item> CORN_SEEDS = ITEMS.register("corn_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CORN_CROP.get(), new Item.Properties()));
+
+    //Custom music discs
+    public static final DeferredHolder<Item, Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
+            () -> new RecordItem(6, ModSounds.BAR_BRAWL.get(), new Item.Properties().stacksTo(1), 2440));
 
 
     public static void register(IEventBus bus){

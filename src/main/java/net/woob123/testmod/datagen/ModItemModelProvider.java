@@ -77,6 +77,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CORN_SEEDS);
 
         simpleBlockItemBlockTexture(ModBlocks.CATMINT);
+
+        simpleItem(ModItems.BAR_BRAWL_MUSIC_DISC);
     }
 
     //Normal items
