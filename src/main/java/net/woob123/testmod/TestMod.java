@@ -14,6 +14,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.woob123.testmod.block.ModBlocks;
+import net.woob123.testmod.loot.ModLootModifiers;
 import net.woob123.testmod.util.ModCreativeModTabs;
 import net.woob123.testmod.item.ModItems;
 import org.slf4j.Logger;
@@ -30,6 +31,8 @@ public class TestMod {
         ModCreativeModTabs.register(bus);
         //Adds blocks to the mod
         ModBlocks.register(bus);
+        //Global loot modifiers
+        //ModLootModifiers.register(bus);
 
         bus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
