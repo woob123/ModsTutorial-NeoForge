@@ -1,8 +1,10 @@
-// 1.20.6	2024-06-19T13:22:55.766558	Tags for minecraft:block mod id testmod
+// 1.20.6	2024-07-04T15:16:17.3719472	Tags for minecraft:block mod id testmod
 d2cb4152db1555239e9ace83b849f15f1d29d957 data/minecraft/tags/blocks/fences.json
 e04ff04f08abfc48e4d0b44a686fa28fe4360bc2 data/minecraft/tags/blocks/fence_gates.json
+1f60ebbdf003b9e5d3a9d46e23a15e9bca020935 data/minecraft/tags/blocks/logs_that_burn.json
 3735622c344aecb3728e1ddecddd075b6c135a77 data/minecraft/tags/blocks/mineable/pickaxe.json
 dcd2e947b73895bee4ee352faccd1ca6f3867b3a data/minecraft/tags/blocks/needs_iron_tool.json
+4899068ce93c5a2731eedbcd3b4cc2dbafd49941 data/minecraft/tags/blocks/planks.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/testmod/tags/blocks/incorrect_for_sapphire_tool.json
 7c0cfe6e695aec3dcde15afe7571c0da87e1752e data/testmod/tags/blocks/metal_detector_valuables.json
 747c3d4fa8da7c7eed50cabf68a4ab6c8bda12aa data/testmod/tags/blocks/needs_sapphire_tool.json

@@ -3,13 +3,18 @@ package net.woob123.testmod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.woob123.testmod.TestMod;
 import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.item.ModItems;
+import net.woob123.testmod.util.ModTags;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -23,8 +28,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(RecipeOutput pRecipeOutput) {
         //Blasting recipes -> can check the RecipeProvider class for more methods for different kinds of recipes
-        oreBlasting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, (ItemLike) ModItems.SAPPHIRE, 0.25f, 100, "sapphire");
-        oreSmelting(pRecipeOutput, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, (ItemLike) ModItems.SAPPHIRE, 0.25f, 100, "sapphire");
+        oreBlasting(pRecipeOutput,
+                SAPPHIRE_SMELTABLES,
+                RecipeCategory.MISC,
+                (ItemLike) ModItems.SAPPHIRE,
+                0.25f, 100, "sapphire");
+        oreSmelting(pRecipeOutput,
+                SAPPHIRE_SMELTABLES,
+                RecipeCategory.MISC,
+                (ItemLike) ModItems.SAPPHIRE,
+                0.25f, 100, "sapphire");
 
         //Shaped recipes
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SAPPHIRE_BLOCK.get())
@@ -72,6 +85,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_SAPPHIRE.get(), 9)
                 .requires(ModBlocks.RAW_SAPPHIRE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RAW_SAPPHIRE_BLOCK.get()), has(ModBlocks.RAW_SAPPHIRE_BLOCK.get()))
+                .save(pRecipeOutput);
+
+        //Custom wood recipes
+        planksFromLog(pRecipeOutput, ModBlocks.PINE_PLANKS.get(), ModTags.Items.PINE_LOGS, 4);
+        woodFromLogs(pRecipeOutput, ModBlocks.PINE_WOOD.get(), ModBlocks.PINE_LOG.get());
+        woodFromLogs(pRecipeOutput, ModBlocks.STRIPPED_PINE_WOOD.get(), ModBlocks.STRIPPED_PINE_LOG.get());
+    }
+    //Planks from Logs
+    protected static void planksFromLog(RecipeOutput pRecipeOutput, ItemLike pPlanks, TagKey<Item> pLogs, int pResultCount) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, pPlanks, pResultCount)
+                .requires(pLogs)
+                .group("planks")
+                .unlockedBy("has_log", has(pLogs))
+                .save(pRecipeOutput);
+    }
+    //Wood from logs
+    protected static void woodFromLogs(RecipeOutput pRecipeOutput, ItemLike pWood, ItemLike pLog) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pWood, 3)
+                .define('#', pLog)
+                .pattern("##")
+                .pattern("##")
+                .group("bark")
+                .unlockedBy("has_log", has(pLog))
                 .save(pRecipeOutput);
     }
 
@@ -217,8 +253,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .pattern("###");
     }
-
-
 
     protected static <T extends AbstractCookingRecipe> void oreCooking(
             RecipeOutput pRecipeOutput,

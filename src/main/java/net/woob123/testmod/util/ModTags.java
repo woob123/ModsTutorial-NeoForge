@@ -15,13 +15,13 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_SAPPHIRE_TOOL = tag("incorrect_for_sapphire_tool");
         public static final TagKey<Block> NEEDS_SAPPHIRE_TOOL = tag("needs_sapphire_tool");
 
-
         private static TagKey<Block> tag(String name){
             return BlockTags.create(new ResourceLocation(TestMod.MOD_ID, name));
         }
     }
     public static class Items{
         //Adding item tags
+        public static final TagKey<Item> PINE_LOGS = tag("pine_logs");
         private static TagKey<Item> tag(String name){
             return ItemTags.create(new ResourceLocation(TestMod.MOD_ID, name));
         }

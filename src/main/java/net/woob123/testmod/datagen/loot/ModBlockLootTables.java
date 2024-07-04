@@ -12,6 +12,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.neoforged.fml.common.Mod;
 import net.woob123.testmod.block.ModBlocks;
 import net.woob123.testmod.block.custom.CornCropBlock;
 import net.woob123.testmod.block.custom.StrawberryCropBlock;
@@ -54,6 +55,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         //Flowers
         this.dropSelf(ModBlocks.CATMINT.get());
         this.add(ModBlocks.POTTED_CATMINT.get(), createPotFlowerItemTable(ModBlocks.CATMINT.get()));
+
+        //Custom Woods
+        this.dropSelf(ModBlocks.PINE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINE_LOG.get());
+        this.dropSelf(ModBlocks.PINE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINE_WOOD.get());
+
+        this.dropSelf(ModBlocks.PINE_PLANKS.get());
+        this.add(ModBlocks.PINE_LEAVES.get(), block ->
+                createLeavesDrops(block, Block.byItem(ModItems.PINE_CONE.get()), NORMAL_LEAVES_SAPLING_CHANCES[1])); // TODO: Change to sapling block (make a sapling block)
     }
 
     //Crop drop condition

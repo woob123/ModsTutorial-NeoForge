@@ -1,6 +1,9 @@
-// 1.20.6	2024-06-19T11:00:36.6927004	Recipes
+// 1.20.6	2024-07-04T15:16:17.3808618	Recipes
+bb7932272f6814ca68e9ff87274270086f530a24 data/testmod/advancements/recipes/building_blocks/pine_planks.json
+6c5e92f25254cf3db241ee077d0bd97cdefd9952 data/testmod/advancements/recipes/building_blocks/pine_wood.json
 d312ce0fb4f8f92423f782840171457e37417547 data/testmod/advancements/recipes/building_blocks/sapphire_slab.json
 2f32a23e12e2e3723e9168b9fbbe2f8edf9c2819 data/testmod/advancements/recipes/building_blocks/sapphire_stairs.json
+6934458d9ed1637066cee525f1a74f220175dc31 data/testmod/advancements/recipes/building_blocks/stripped_pine_wood.json
 4da4a5d086ccdfb7a4afc345a3865f68e15e5ef1 data/testmod/advancements/recipes/decorations/sapphire_fence.json
 9bc1299b3f05060ee0105f79ee2dd303fc4ef7f9 data/testmod/advancements/recipes/misc/raw_sapphire.json
 ce2190f11c7e4698fe3d16f1bd22655df0fd4620 data/testmod/advancements/recipes/misc/raw_sapphire_block.json
@@ -14,6 +17,8 @@ cc3beb4081cb7228a6e059e623bcd0fd9a440cf3 data/testmod/advancements/recipes/misc/
 c936a2e28510ce363f97ea0b90c724edb37b0236 data/testmod/advancements/recipes/redstone/sapphire_fence_gate.json
 d839254533c1c1fec7953442396eda00ab76c54b data/testmod/advancements/recipes/redstone/sapphire_pressure_plate.json
 91c546601d3158f36dc66761c0e4d030602cdf71 data/testmod/advancements/recipes/redstone/sapphire_trapdoor.json
+90a4408c827eba35e30b10f89552d1ee44beba11 data/testmod/recipes/pine_planks.json
+e063a2d28c4fa07f089d683b3a4990e7f8fb143b data/testmod/recipes/pine_wood.json
 203d6cb10ef6f3566da2ad9c0a03db27b599134d data/testmod/recipes/raw_sapphire.json
 eca1943f44352f574abec510fc77c7c79a2d91a0 data/testmod/recipes/raw_sapphire_block.json
 2072e12646da95d1b9a1255f86aa3c7b35df8f3d data/testmod/recipes/sapphire.json
@@ -29,3 +34,4 @@ e2d2620396fec7ed3a35826f893c73dd6284d5e7 data/testmod/recipes/sapphire_from_smel
 3d6bb00c32558c736e6c495235e63a3f09f46638 data/testmod/recipes/sapphire_slab.json
 efd0fe8e62c37feda0f8e239acea25912f54d872 data/testmod/recipes/sapphire_stairs.json
 a0566c68551fd7ef30488234bbb03997c1e5afb8 data/testmod/recipes/sapphire_trapdoor.json
+1be3d63961d617db7abcaf5e72ff0cec6c1b4fa5 data/testmod/recipes/stripped_pine_wood.json

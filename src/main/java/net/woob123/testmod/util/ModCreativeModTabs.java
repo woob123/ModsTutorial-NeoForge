@@ -51,6 +51,20 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
             }).build());
 
+    public static final Holder<CreativeModeTab> WOOD_TAB = CREATIVE_MOD_TABS.register("wood_tab", () -> CreativeModeTab.builder()
+            .title(Component.translatable("creative.wood_tab"))
+            .icon(() -> ModItems.PINE_CONE.value().getDefaultInstance())
+
+            .displayItems((pParameters, pOutput) -> {
+                //Pine Wood
+                pOutput.accept(ModBlocks.PINE_LOG.get());
+                pOutput.accept(ModBlocks.PINE_WOOD.get());
+                pOutput.accept(ModBlocks.STRIPPED_PINE_LOG.get());
+                pOutput.accept(ModBlocks.STRIPPED_PINE_WOOD.get());
+                pOutput.accept(ModBlocks.PINE_PLANKS.get());
+                pOutput.accept(ModBlocks.PINE_LEAVES.get());
+            }).build());
+
 
     public static final Holder<CreativeModeTab> SAPPHIRE_EVERYTHING = CREATIVE_MOD_TABS.register("sapphire_everything_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("creative.sapphire_everything_tab"))
