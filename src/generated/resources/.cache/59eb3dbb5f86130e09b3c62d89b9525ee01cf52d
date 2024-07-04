@@ -1,9 +1,13 @@
-// 1.20.6	2024-07-04T15:16:17.3785085	Loot Tables
+// 1.20.6	2024-07-04T17:11:03.6530243	Loot Tables
 e670f2e27dd69c736a9b94105bd86809586db670 data/testmod/loot_tables/blocks/catmint.json
 a515d0084b45599b0709378f46d50f74319729d5 data/testmod/loot_tables/blocks/corn_crop.json
+55c6154eb4a03222b40ffaa4f698800082cf1379 data/testmod/loot_tables/blocks/pine_hanging_sign.json
 0eb5603d831b48e28237f2c92bbacd8515716ded data/testmod/loot_tables/blocks/pine_leaves.json
 6a63c5e3a754ad7a2de7c6ff453bcbeff7093458 data/testmod/loot_tables/blocks/pine_log.json
 6823f564f8accafca204ae74450036bd38c51f6e data/testmod/loot_tables/blocks/pine_planks.json
+38d7d515d6c93f79dfff8a68362d575054fff723 data/testmod/loot_tables/blocks/pine_sign.json
+17652bf7ae253b6300beb5f63e59b62e9b95ec74 data/testmod/loot_tables/blocks/pine_wall_hanging_sign.json
+be7aee683046b31528a559e04636aa4fd7cbd7bf data/testmod/loot_tables/blocks/pine_wall_sign.json
 9285caab29ea8711143bca1665154cd5e87fa688 data/testmod/loot_tables/blocks/pine_wood.json
 1b4cb256e0223ffc9f2942d685d22b720ca05c01 data/testmod/loot_tables/blocks/potted_catmint.json
 eadd000c86731fc59ed7520d336a1a0e5fdfcda7 data/testmod/loot_tables/blocks/raw_sapphire_block.json

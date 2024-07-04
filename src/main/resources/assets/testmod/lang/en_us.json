@@ -63,5 +63,8 @@
   "block.testmod.stripped_pine_wood": "Stripped Pine Wood",
 
   "block.testmod.pine_planks": "Pine Planks",
-  "block.testmod.pine_leaves": "Pine Leaves"
+  "block.testmod.pine_leaves": "Pine Leaves",
+
+  "block.testmod.pine_sign": "Pine Sign",
+  "block.testmod.pine_hanging_sign": "Pine Hanging Sign"
 }

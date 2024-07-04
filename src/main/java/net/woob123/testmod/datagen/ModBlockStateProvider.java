@@ -69,7 +69,29 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.PINE_PLANKS);
         leavesBlock(ModBlocks.PINE_LEAVES);
+
+        signBlock(ModBlocks.PINE_SIGN.get(), ModBlocks.PINE_WALL_SIGN.get(), blockTexture(ModBlocks.PINE_PLANKS.get()));
+        hangingSignBlock(ModBlocks.PINE_HANGING_SIGN.get(), ModBlocks.PINE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.PINE_PLANKS.get()));
     }
+    //Custom hanging signs
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return BuiltInRegistries.BLOCK.getKey(block);
+    }
+
     //Custom leaves
     private void leavesBlock(DeferredHolder<Block, ? extends Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),

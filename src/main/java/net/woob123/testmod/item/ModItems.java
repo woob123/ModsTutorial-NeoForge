@@ -101,6 +101,12 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> RHINO_SPANW_EGG = ITEMS.register("rhino_spawn_egg",
             () -> new SpawnEggItem(ModEntities.RHINO.get(), 0x7e9680, 0xc5d1c5, new Item.Properties()));
 
+    //Custom signs
+    public static final DeferredHolder<Item, Item> PINE_SIGN = ITEMS.register("pine_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.PINE_SIGN.get(), ModBlocks.PINE_WALL_SIGN.get()));
+    public static final DeferredHolder<Item, Item> PINE_HANGING_SIGN = ITEMS.register("pine_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.PINE_HANGING_SIGN.get(), ModBlocks.PINE_WALL_HANGING_SIGN.get(),  new Item.Properties().stacksTo(16)));
+
     public static void register(IEventBus bus){
         ITEMS.register(bus);
     }

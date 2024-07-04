@@ -65,6 +65,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PINE_PLANKS.get());
         this.add(ModBlocks.PINE_LEAVES.get(), block ->
                 createLeavesDrops(block, Block.byItem(ModItems.PINE_CONE.get()), NORMAL_LEAVES_SAPLING_CHANCES[1])); // TODO: Change to sapling block (make a sapling block)
+
+        //Custom signs
+        this.add(ModBlocks.PINE_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINE_SIGN.get()));
+        this.add(ModBlocks.PINE_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINE_SIGN.get()));
+        this.add(ModBlocks.PINE_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINE_HANGING_SIGN.get()));
+        this.add(ModBlocks.PINE_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINE_HANGING_SIGN.get()));
     }
 
     //Crop drop condition

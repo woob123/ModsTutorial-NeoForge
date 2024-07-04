@@ -1,6 +1,7 @@
 package net.woob123.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -16,12 +17,14 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.woob123.testmod.block.ModBlocks;
+import net.woob123.testmod.block.entity.ModBlockEntities;
 import net.woob123.testmod.entity.ModEntities;
 import net.woob123.testmod.entity.client.RhinoRenderer;
 import net.woob123.testmod.item.ModItems;
 import net.woob123.testmod.loot.ModLootModifiers;
 import net.woob123.testmod.sound.ModSounds;
 import net.woob123.testmod.util.ModCreativeModTabs;
+import net.woob123.testmod.util.ModWoodTypes;
 import net.woob123.testmod.villager.ModVillagers;
 import org.slf4j.Logger;
 
@@ -45,6 +48,8 @@ public class TestMod {
         ModSounds.register(bus);
         //Custom entities
         ModEntities.register(bus);
+        //Custom block entities
+        ModBlockEntities.register(bus);
 
         bus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
@@ -88,7 +93,11 @@ public class TestMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            //Adding entity renderers
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+
+            //Adding new wood types
+            Sheets.addWoodType(ModWoodTypes.PINE);
         }
     }
 }

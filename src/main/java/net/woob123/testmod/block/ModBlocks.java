@@ -20,8 +20,13 @@ import net.woob123.testmod.block.custom.CornCropBlock;
 import net.woob123.testmod.block.custom.ModFlammableRotatedPillarBlock;
 import net.woob123.testmod.block.custom.SoundBlock;
 import net.woob123.testmod.block.custom.StrawberryCropBlock;
+import net.woob123.testmod.block.custom.signs.ModHangingSignBlock;
+import net.woob123.testmod.block.custom.signs.ModStandingSignBlock;
+import net.woob123.testmod.block.custom.signs.ModWallHangingSignBlock;
+import net.woob123.testmod.block.custom.signs.ModWallSignBlock;
 import net.woob123.testmod.item.ModItems;
 import net.woob123.testmod.sound.ModSounds;
+import net.woob123.testmod.util.ModWoodTypes;
 
 import java.util.function.Supplier;
 
@@ -136,6 +141,18 @@ public class ModBlocks {
                 }
             });
 
+    //Custom signs
+    public static final DeferredHolder<Block, StandingSignBlock> PINE_SIGN = BLOCKS.register("pine_sign",
+            () -> new ModStandingSignBlock(ModWoodTypes.PINE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN)));
+
+    public static final DeferredHolder<Block, WallSignBlock> PINE_WALL_SIGN = BLOCKS.register("pine_wall_sign",
+            () -> new ModWallSignBlock(ModWoodTypes.PINE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN)));
+
+    public static final DeferredHolder<Block, CeilingHangingSignBlock> PINE_HANGING_SIGN = BLOCKS.register("pine_hanging_sign",
+            () -> new ModHangingSignBlock(ModWoodTypes.PINE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)));
+
+    public static final DeferredHolder<Block, ModWallHangingSignBlock> PINE_WALL_HANGING_SIGN = BLOCKS.register("pine_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(ModWoodTypes.PINE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN)));
 
     public static <T extends Block> DeferredHolder<Block, T> registerBlock(String name, Supplier<T> block){
         var toReturn = BLOCKS.register(name, block);

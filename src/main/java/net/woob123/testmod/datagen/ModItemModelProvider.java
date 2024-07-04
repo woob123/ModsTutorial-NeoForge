@@ -35,7 +35,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
-    // Ce erori? gen cand dau run la data moare
     public ModItemModelProvider(PackOutput output, String modid, ExistingFileHelper existingFileHelper) {
         super(output, modid, existingFileHelper);
     }
@@ -81,6 +80,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.BAR_BRAWL_MUSIC_DISC);
 
         withExistingParent(ModItems.RHINO_SPANW_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+        simpleItem(ModItems.PINE_SIGN);
+        simpleItem(ModItems.PINE_HANGING_SIGN);
     }
 
     //Normal items

@@ -1,10 +1,12 @@
-// 1.20.6	2024-06-23T20:57:30.8586676	Item Models: testmod
+// 1.20.6	2024-07-04T17:11:03.6625027	Item Models: testmod
 bd40b1f60f98b5c3ed3c546e107764322fc90884 assets/testmod/models/item/bar_brawl_music_disc.json
 d3b7b7e189fb49170aa0ba9cad44bcd30438ad9f assets/testmod/models/item/catmint.json
 058c2f8f8be41db163ef3c7089fc5b9293183b79 assets/testmod/models/item/corn.json
 9d70135deeaa2d7d182d940b4361e7acffe08370 assets/testmod/models/item/corn_seeds.json
 d89ed460e9c5a6a8a06b154ab143e4a5a06307a4 assets/testmod/models/item/metal_detector.json
 4aec79de5dc4ce9b6a9997bddb9f8cf3b80e82c9 assets/testmod/models/item/pine_cone.json
+d17b22f82965c665a02fa7e11ffefc2e32b4dc60 assets/testmod/models/item/pine_hanging_sign.json
+a6a88d64402eb3570c5fbb00c44396c5c6e5c72a assets/testmod/models/item/pine_sign.json
 2f41f2b970d351507c3598ede3a24acfda5acc78 assets/testmod/models/item/raw_sapphire.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/testmod/models/item/rhino_spawn_egg.json
 e3b32f83ca3aaa4f46841af3f084fa54c1fe2a53 assets/testmod/models/item/sapphire.json
